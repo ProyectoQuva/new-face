@@ -6,7 +6,9 @@
   "dependencies": {
     "masonry": "^4.1.1",
     "angular": "^1.5.8",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "angular-route": "^1.5.8",
+    "angular-resource": "^1.5.8"
   },
   "devDependencies": {}
 }
