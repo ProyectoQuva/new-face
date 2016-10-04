@@ -1,0 +1,8 @@
+{
+  "name": "vove-frontend",
+  "description": "FrontEnd para diario digital vo-ve",
+  "author": "QUVA",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {}
+}
