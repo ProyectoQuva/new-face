@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('vove', ['ngRoute'])
+		.module('vove', ['ngRoute','wu.masonry'])
 		.config(config);
 
 	function config($locationProvider, $routeProvider){

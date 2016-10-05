@@ -2,7 +2,7 @@ function MM_goToURL() { //v3.0
   var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
   for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
 }
-/*MASONRY*/
+/*MASONRY
 $(document).ready(function(){
 		var $grid = $('article').masonry({
 		  itemSelector: '.item',
@@ -19,12 +19,12 @@ $(document).ready(function(){
 		  columnWidth: '.col-bas4',
 		  percentPosition: true
 		});
-
+		console.log($nota);
 		setInterval(reordenar, 333);
 		function reordenar(){
 			$nota.masonry();
 		}
-/*********categorias***********/
+/*********categorias***********
 
 		var $grid = $('#categoria').masonry({
 		  itemSelector: '.it-cat',
@@ -41,7 +41,7 @@ $(document).ready(function(){
 			$nota.masonry();
 		}
 
-});
+});*/
 /*Nicescroll*/
 jQuery(document).ready(function($){
     $("nav").niceScroll({
