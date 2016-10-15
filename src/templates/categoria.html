@@ -13,14 +13,16 @@
 	<!------------CAJA DONDE SE REPITEN LAS NOTICAS------------>
 	<article id="categoria" class="wx12 hxa columnas">
 		<!--EL SIGUIENTE A SE REPITE POR CADA NOTA---->
-		<a href="{ENLACE DE LA NOTA}">
-			<div class="item it-cat">
-				<img src="{URL DE LA IMAGEN PRINCIPAL}">
-				<time>{FECHA DE LA NOTA}</time>
-				<h5>{TITULO DE LA NOTA}</h5>
-				<p>{BAJADA DE LA NOTA}</p>
-			</div>
-		</a>
+		<div data-ng-repeat="cat in categoria.notas_categoria">
+			<a href="nota/{{cat.link}}">
+				<div class="item it-cat">
+					<img src="">
+					<time>{{cat.fecha}}</time>
+					<h5>{{cat.titulo}}</h5>
+					<p>{{cat.bajada}}</p>
+				</div>
+			</a>
+		</div>
 	</article>
 	<!--PIE DE CATEGORIA
 		EL DIV "CARGA" APARECE SIEMPRE ABAJO HASTA QUE SE MUESTRAN MAS NOTICIAS

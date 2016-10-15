@@ -13,8 +13,10 @@
      		controller: 'HomeCtrl',
      		controllerAs: 'home'
 	    })
-	    .when('/categoria',{
-	      templateUrl: 'templates/categoria.html'
+	    .when('/categoria/:categoria',{
+	      templateUrl: 'templates/categoria.html',
+	      controller: 'CategoriaCtrl',
+	      controllerAs: 'categoria'
 	    })
 	    .when('/nota', {
 	    	templateUrl: 'templates/nota-comun.html'
