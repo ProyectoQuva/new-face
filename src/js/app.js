@@ -2,14 +2,16 @@
 	'use strict';
 
 	angular
-		.module('vove', ['ngRoute','wu.masonry'])
+		.module('vove', ['ngRoute', 'vove.controllers', 'vove.services'])
 		.config(config);
 
 	function config($locationProvider, $routeProvider){
 		$locationProvider.html5Mode(true);
 		$routeProvider
 		.when('/', {
-     	templateUrl: 'templates/principal.html'
+     		templateUrl: 'templates/principal.html',
+     		controller: 'HomeCtrl',
+     		controllerAs: 'home'
 	    })
 	    .when('/categoria',{
 	      templateUrl: 'templates/categoria.html'

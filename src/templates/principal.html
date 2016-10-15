@@ -205,817 +205,118 @@
 
 	<section class="hx1 col-bas12">
 		<article class="politica">
+			<div data-ng-repeat="politica in home.notas_politica track by politica.id">
 			<!--grande-->
-			<div class="item it-3x2">
-				<div class="wx4 hx12">
-					<h3>Aliquam a auctor magna. Aenean molestie volutpat nulla</h3>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-3x2" data-ng-show="{{politica.rango == 'destacado'}}">
+				<div style="background-image: url(images/{{politica.imagen}})">
+					<div class="wx4 hx12">
+						<time>{{politica.fecha}}</time>
+						<h3>{{politica.titulo}}</h3>
+						<p>{{politica.bajada}}</p>
+					</div>
 				</div>
 			</div>
 			<!--mediano-->
-			<div class="item it-2x2">
-				<div class="wx12">
-					<h4>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h4>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				</div>
-			</div>
 			
 			<!--verticales-->
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-1x2" data-ng-show="{{politica.rango == 'normal'}}">
+				<div class="wx12 hx4" style="background-image: url(images/{{politica.imagen}})"></div>
+				<time>{{politica.fecha}}</time>
+				<h5>{{politica.titulo}}</h5>
+				<p>{{politica.bajada}}</p>
 				<span class="icon facebook"></span>
 				<span class="icon twitter"></span>
 			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-
-
 
 			<!--horizontales-->
-			<div class="item it-2x1">
-					<div class="wx4 hx12"></div>
-					<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-					<span class="icon-facebook"></span>
-					<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>	
-
-	
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
 			</div>
 		</article>
 	</section>
 	<section class="hx1 col-bas12">
 		<article class="deportes">
 			<!--grande-->
-			<div class="item it-3x2">
-				<div class="wx4 hx12">
-					<h3>Aliquam a auctor magna. Aenean molestie volutpat nulla</h3>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div data-ng-repeat="deportes in home.notas_deportes track by deportes.id">
+			<!--grande-->
+			<div class="item it-3x2" data-ng-show="{{deportes.rango == 'destacado'}}">
+				<div style="background-image: url(images/{{deportes.imagen}})">
+					<div class="wx4 hx12">
+						<time>{{deportes.fecha}}</time>
+						<h3>{{deportes.titulo}}</h3>
+						<p>{{deportes.bajada}}</p>
+					</div>
 				</div>
 			</div>
 			<!--mediano-->
-			<div class="item it-2x2">
-				<div class="wx12">
-					<h4>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h4>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				</div>
-			</div>
 			
 			<!--verticales-->
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-1x2" data-ng-show="{{deportes.rango == 'normal'}}">
+				<div class="wx12 hx4" style="background-image: url(images/{{deportes.imagen}})"></div>
+				<time>{{deportes.fecha}}</time>
+				<h5>{{deportes.titulo}}</h5>
+				<p>{{deportes.bajada}}</p>
 				<span class="icon facebook"></span>
 				<span class="icon twitter"></span>
 			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-
-
 
 			<!--horizontales-->
-			<div class="item it-2x1">
-					<div class="wx4 hx12"></div>
-					<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-					<span class="icon-facebook"></span>
-					<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>	
-
-	
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
 			</div>
 		</article>
 	</section>
 	<section class="hx1 col-bas12">
 		<article class="economia">
+			<div data-ng-repeat="economia in home.notas_economia track by economia.id">
 			<!--grande-->
-			<div class="item it-3x2">
-				<div class="wx4 hx12">
-					<h3>Aliquam a auctor magna. Aenean molestie volutpat nulla</h3>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-3x2" data-ng-show="{{economia.rango == 'destacado'}}">
+				<div style="background-image: url(images/{{economia.imagen}})">
+					<div class="wx4 hx12">
+						<time>{{economia.fecha}}</time>
+						<h3>{{economia.titulo}}</h3>
+						<p>{{economia.bajada}}</p>
+					</div>
 				</div>
 			</div>
 			<!--mediano-->
-			<div class="item it-2x2">
-				<div class="wx12">
-					<h4>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h4>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				</div>
-			</div>
 			
 			<!--verticales-->
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-1x2" data-ng-show="{{economia.rango == 'normal'}}">
+				<div class="wx12 hx4" style="background-image: url(images/{{economia.imagen}})"></div>
+				<time>{{economia.fecha}}</time>
+				<h5>{{economia.titulo}}</h5>
+				<p>{{economia.bajada}}</p>
 				<span class="icon facebook"></span>
 				<span class="icon twitter"></span>
 			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-
-
 
 			<!--horizontales-->
-			<div class="item it-2x1">
-					<div class="wx4 hx12"></div>
-					<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-					<span class="icon-facebook"></span>
-					<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>	
-
-	
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
 			</div>
 		</article>
 	</section>
 	<section class="hx1 col-bas12">
 		<article class="actualidad">
+			<div data-ng-repeat="actualidad in home.notas_actualidad track by actualidad.id">
 			<!--grande-->
-			<div class="item it-3x2">
-				<div class="wx4 hx12">
-					<h3>Aliquam a auctor magna. Aenean molestie volutpat nulla</h3>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-3x2" data-ng-show="{{actualidad.rango == 'destacado'}}">
+				<div style="background-image: url(images/{{actualidad.imagen}})">
+					<div class="wx4 hx12">
+						<time>{{actualidad.fecha}}</time>
+						<h3>{{actualidad.titulo}}</h3>
+						<p>{{actualidad.bajada}}</p>
+					</div>
 				</div>
 			</div>
 			<!--mediano-->
-			<div class="item it-2x2">
-				<div class="wx12">
-					<h4>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h4>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				</div>
-			</div>
 			
 			<!--verticales-->
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
+			<div class="item it-1x2" data-ng-show="{{actualidad.rango == 'normal'}}">
+				<div class="wx12 hx4" style="background-image: url(images/{{actualidad.imagen}})"></div>
+				<time>{{actualidad.fecha}}</time>
+				<h5>{{actualidad.titulo}}</h5>
+				<p>{{actualidad.bajada}}</p>
 				<span class="icon facebook"></span>
 				<span class="icon twitter"></span>
 			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-			<div class="item it-1x2">
-				<div class="wx12 hx4"></div>
-				<h5>Donec eget odio a nibh aliquet tincidunt volutpat sit amet elit.</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum</p>
-				<span class="icon facebook"></span>
-				<span class="icon twitter"></span>
-			</div>
-
-
 
 			<!--horizontales-->
-			<div class="item it-2x1">
-					<div class="wx4 hx12"></div>
-					<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-					<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-					<span class="icon-facebook"></span>
-					<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>
-			<div class="item it-2x1">
-				<div class="wx4 hx12"></div>
-				<h5>Aliquam a auctor magna. Aenean molestie volutpat nulla</h5>
-				<p>Donec egestas risus at orci malesuada consequat. Phasellus egestas pharetra diam et suscipit. Sed sagittis placerat consequat. Praesent bibendum </p>
-				<span class="icon-facebook"></span>
-				<span class="icon-twitter"></span>
-			</div>	
-
-	
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
-			</div>
-			<div class="item it-1x1">
-				<h5>Mea ex elit similique, nec illud iisque ullamcorper et, integre ceteros patrioque ea pro</h5>
 			</div>
 		</article>
 	<div class="bot-nav icon-move"></div>

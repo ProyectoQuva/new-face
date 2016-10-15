@@ -3,12 +3,11 @@
   "description": "FrontEnd para diario digital vo-ve",
   "author": "QUVA",
   "version": "1.0.0",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "angular-resource": "^1.5.8",
-    "jquery": "1.11.3",
     "angular-masonry": "^0.16.0"
-  },
-  "devDependencies": {}
+  }
 }
