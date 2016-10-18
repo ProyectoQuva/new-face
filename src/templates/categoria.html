@@ -11,11 +11,11 @@
 		</div>	
 	</div>
 	<!------------CAJA DONDE SE REPITEN LAS NOTICAS------------>
-	<article id="categoria" class="wx12 hxa columnas">
+	<article masonry id="categoria" class="wx12 hxa columnas" >
 		<!--EL SIGUIENTE A SE REPITE POR CADA NOTA---->
 		<div data-ng-repeat="cat in categoria.notas_categoria">
 			<a href="nota/{{cat.link}}">
-				<div class="item it-cat">
+				<div class="item it-cat masonry-brick">
 					<img src="">
 					<time>{{cat.fecha}}</time>
 					<h5>{{cat.titulo}}</h5>

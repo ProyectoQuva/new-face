@@ -31,19 +31,13 @@
 				<ul>
 					<li><span class="icon-home"></span>Ultimas Noticias</li>
 
+					<li><span class="icon-clock"></span>actualidad</li>
 					<li><span class="icon-work"></span>política</li>
 					<li><span class="icon-directions_bike"></span>deportes</li>
 					<li><span class="icon-message"></span>diálogo abierto</li>
-					<li><span class="icon-clock"></span>actualidad</li>
 					<li><span class="icon-weekend"></span>entretenimiento</li>
 					<li><span class="icon-star2"></span>lo más visto</li>
 					<li><span class="icon-border_color"></span>más comentado</li>
-
-					<li><span class="icon-local_library"></span>horóscopo</li>
-					<li><span class="icon-local_play"></span>cuponera</li>
-					<li><span class="icon-insert_invitation"></span>agenda</li>
-					<li><span class="icon-photo"></span>galería</li>
-					<li><span class="icon-theaters"></span>multimedia</li>
 				</ul>
 			</div>
 			<div id="buscador">
@@ -112,22 +106,39 @@
 		</footer>		
 	</aside>
 
-	<section data-ng-view class="nota politica"></section>
-	<!--SI NO ME EQUIVOCO LOS TEMPLATES SE INYECTARÍAN EN EL SECTION
-		DEPENDIENDO DEL TEMPLATE EL SECTION TIENE QUE LLEVAR UNA CLASE DISTINTA
-		LAS CLASES SON:
-		1) "principal"
-		2) "categoria" + "politica || deportes || entretenimiento || actualidad || dialogo"
-		3) "nota" + "politica || deportes || entretenimiento || actualidad || dialogo"
-	-->
+	<section data-ng-view class="principal politica"></section>
 
 
 	<!--bower:js-->
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<script src="lib/jquery-bridget/jquery-bridget.js"></script>
+	<script src="lib/ev-emitter/ev-emitter.js"></script>
+	<script src="lib/desandro-matches-selector/matches-selector.js"></script>
+	<script src="lib/fizzy-ui-utils/utils.js"></script>
+	<script src="lib/get-size/get-size.js"></script>
+	<script src="lib/outlayer/item.js"></script>
+	<script src="lib/outlayer/outlayer.js"></script>
+	<script src="lib/masonry/masonry.js"></script>
+
+	<script src="lib/imagesloaded/imagesloaded.js"></script>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular-masonry/angular-masonry.js"></script>
+
+	<script src="lib/angular-route/angular-route.js"></script>
+	<script src="lib/angular-resource/angular-resource.js"></script>
+
 	<!--endbower-->
+
 	<script src="js/app.js"></script>
 	<script src="js/controller.js"></script>
 	<script src="js/service.js"></script>
+	<script src="js/angular-masonry.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
 	<!--inject:js-->
+	<script src="/js/controllers/CategoriaCtrl.js"></script>
+	<script src="/js/controllers/HomeCtrl.js"></script>
+	<script src="/js/services/Noticias.js"></script>
 	<!--endinject-->
 </body>
 </html>

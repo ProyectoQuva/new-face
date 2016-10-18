@@ -2,62 +2,7 @@ function MM_goToURL() { //v3.0
   var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
   for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
 }
-MASONRY
-$(document).ready(function(){
-		var $grid = $('article').masonry({
-		  itemSelector: '.item',
-		  columnWidth: 250
-		});
-		// layout Isotope after each image loads
-		$grid.imagesLoaded().progress( function() {
-		  $grid.masonry();
-		});  		
 
-
-		var $nota = $('#notacuerpo').masonry({
-		  itemSelector: '.bloque',
-		  columnWidth: '.col-bas4',
-		  percentPosition: true
-		});
-		console.log($nota);
-		setInterval(reordenar, 333);
-		function reordenar(){
-			$nota.masonry();
-		}
-/*********categorias***********/
-
-		var $grid = $('#categoria').masonry({
-		  itemSelector: '.it-cat',
-		  columnWidth:'.it-cat',
-		  percentPosition: true
-		});
-		// layout Isotope after each image loads
-		$grid.imagesLoaded().progress( function() {
-		  $grid.masonry();
-		});  
-		
-		setInterval(reordenarcat, 333);
-		function reordenarcat(){
-			$nota.masonry();
-		}
-
-});
-/*Nicescroll*/
-jQuery(document).ready(function($){
-    $("nav").niceScroll({
-			scrollspeed: 60,
-			mousescrollstep: 40,
-			cursorwidth: 5,
-			cursorheight: 130,
-			cursorborder: 0,
-			cursorcolor: 'rgba(255,255,255,0.2)',
-			cursorborderradius: 0,
-			styler:"fb",
-			autohidemode: false,
-			horizrailenabled: false
-		});
-  		}
-	);
 /*scroll*/
 jQuery(document).ready(function($){
 $('nav').niceScroll({
@@ -140,7 +85,14 @@ $(document).ready(vovenav);
 		nav = 3;
 	    $(vovenav);
 	});
+/*ALTURA DEL article*/
+$(document).ready(altoart);
 
+	function altoart(){
+		var alto_art = $(".desplazador").height();
+		$('.desplazador article').height(alto_art);
+	} 
+setInterval(altoart, 100);
 /*VISUALBOX*/
 $(document).ready(visualbox);
 	var visual = 0;
@@ -174,6 +126,14 @@ $(document).ready(visualbox);
     });
 })(jQuery);
 
+(function($){
+	$(window).load(function(){
+
+		$(".desplazador").mThumbnailScroller({
+			theme:"hover-classic"
+		});
+	});
+})(jQuery);
 /*Cambiar el fondo del img*/
 $(".thumbs a").load(function(){
 	var elthumb = $(this).attr("href");
