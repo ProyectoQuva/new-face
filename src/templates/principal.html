@@ -1,6 +1,6 @@
 	<div class="desplazador wx12 hx12">
 		<article masonry reload-on-show column-width="250" class="actualidad">
-			<div data-ng-repeat="actualidad home.notas_actualidad track by actualidad.id">
+			<div data-ng-repeat="actualidad in home.notas_actualidad track by actualidad.id">
 				<div class="masonry-brick item it-3x2 {{actualidad.rango}}" style="background-image: url(http://www.vo-ve.com/images/{{actualidad.imagen}})" data-ng-show="{{actualidad.rango == 'destacado'}}">
 						<div class="wx4 hx12">
 							<time>{{actualidad.fecha}}</time>
@@ -44,8 +44,8 @@
 
 	<div class="desplazador wx12 hx12">
 		<article masonry reload-on-show column-width="250" class="entretenimiento">
-			<div data-ng-repeat="entretenimiento home.notas_entretenimiento track by entretenimiento.id">
-				<a href="">
+			<div data-ng-repeat="entretenimiento in home.notas_entretenimiento track by entretenimiento.id">
+				<a href="/nota/{{entretenimiento.id}}/{{entretenimiento.nombre}}/{{entretenimiento.link}}">
 				<div class="masonry-brick item it-3x2 {{entretenimiento.rango}}" style="background-image: url(http://www.vo-ve.com/images/{{entretenimiento.imagen}})" data-ng-show="{{entretenimiento.rango == 'destacado'}}">
 						<div class="wx4 hx12">
 							<time>{{entretenimiento.fecha}}</time>
@@ -69,7 +69,7 @@
 
 	<div class="desplazador wx12 hx12">
 		<article masonry reload-on-show column-width="250" class="deportes">
-			<div data-ng-repeat="deportes home.notas_deportes track by deportes.id">
+			<div data-ng-repeat="deportes in home.notas_deportes track by deportes.id">
 				<a href="">
 				<div class="masonry-brick item it-3x2 {{deportes.rango}}" style="background-image: url(http://www.vo-ve.com/images/{{deportes.imagen}})" data-ng-show="{{deportes.rango == 'destacado'}}">
 						<div class="wx4 hx12">
@@ -94,7 +94,7 @@
 
 	<div class="desplazador wx12 hx12">
 		<article masonry reload-on-show column-width="250" class="dialogo">
-			<div data-ng-repeat="dialogo home.notas_dialogo track by dialogo.id">
+			<div data-ng-repeat="dialogo in home.notas_dialogo track by dialogo.id">
 				<a href="">
 				<div class="masonry-brick item it-3x2 {{dialogo.rango}}" style="background-image: url(http://www.vo-ve.com/images/{{dialogo.imagen}})" data-ng-show="{{dialogo.rango == 'destacado'}}">
 						<div class="wx4 hx12">

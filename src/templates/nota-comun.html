@@ -24,9 +24,9 @@
 <div masonry column-width=".col-bas4" class="cont" id="notacuerpo">
 	<!----------------ENCABEZADO---------------->
 	<div class="col-bas8 col-med12 encabezado masonry-brick">
-			<time>{FECHA}</time>
-			<h2>{TITULO}</h2>
-			<b>{BAJADA</b> 
+			<time>{{nota.noticia[0].fecha}}</time>
+			<h2>{{nota.noticia[0].titulo}}</h2>
+			<b>{{nota.noticia[0].bajada}}</b> 
 	</div>
 	<!----------------IMAGENES---------------->
 	<div class="col-bas4 col-med12 imagenes masonry-brick">
@@ -41,7 +41,7 @@
 	</div>
 	<!----------------CUERPO TEXTUAL---------------->
 	<div class="col-bas8 col-med12 cuerpo masonry-brick">
-		{AQUI VA METIDO EL CUERPO DE LA NOTA}
+		<div ng-bind-unsafe-html="nota.noticia[0].cuerpo"></div>
 	</div>
 	<!----------------PIE DE NOTA---------------->
 	<div class="col-bas8 col-med12 pie masonry-brick">

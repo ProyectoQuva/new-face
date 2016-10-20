@@ -13,6 +13,11 @@
      		controller: 'HomeCtrl',
      		controllerAs: 'home'
 	    })
+	    .when('/nota/:id/:categoria/:titulo', {
+	    	templateUrl: 'templates/nota-comun.html',
+	    	controller: 'NotaCtrl',
+	    	controllerAs: 'nota'
+	    })
 	    .when('/categoria/:categoria',{
 	      templateUrl: 'templates/categoria.html',
 	      controller: 'CategoriaCtrl',

@@ -8,28 +8,29 @@
 	function HomeCtrl(Noticias){
 		var vm = this;
 
-		Noticias.query({categoria: "politica", s: 20}).$promise.then(function(res){
-			vm.notas_politica = res;
+		Noticias.get({categoria: "politica", s: 20}).$promise.then(function(res){
+			console.log(res.results);
+			vm.notas_politica = res.results;
 		});
 
-		Noticias.query({categoria: "deportes", s: 20}).$promise.then(function(res){
-			vm.notas_deportes = res;
+		Noticias.get({categoria: "deportes", s: 20}).$promise.then(function(res){
+			vm.notas_deportes = res.results;
 		});
 
-		Noticias.query({categoria: "entretenimiento", s: 20}).$promise.then(function(res){
-			vm.notas_entretenimiento = res;
+		Noticias.get({categoria: "entretenimiento", s: 20}).$promise.then(function(res){
+			vm.notas_entretenimiento = res.results;
 		});
 
-		Noticias.query({categoria: "finanzas y negocios", s: 20}).$promise.then(function(res){
-			vm.notas_economia = res;
+		Noticias.get({categoria: "finanzas y negocios", s: 20}).$promise.then(function(res){
+			vm.notas_economia = res.results;
 		});
 
-		Noticias.query({categoria: "actualidad", s: 20}).$promise.then(function(res){
-			vm.notas_actualidad = res;
+		Noticias.get({categoria: "actualidad", s: 20}).$promise.then(function(res){
+			vm.notas_actualidad = res.results;
 		});
 
-		Noticias.query({categoria: "dialogo abierto", s: 20}).$promise.then(function(res){
-			vm.notas_dialogo = res;
+		Noticias.get({categoria: "dialogo abierto", s: 20}).$promise.then(function(res){
+			vm.notas_dialogo = res.results;
 		});
 	}
 })();
