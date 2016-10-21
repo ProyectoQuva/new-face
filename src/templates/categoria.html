@@ -1,6 +1,6 @@
 	<!------------ENCABEZADO DE LA CATEGORIA---->
 	<div class="wx12 top">
-		<h2>{NOMBRE DE LA CATEGORIA}</h2>
+		<h2>{{nota.titulo}}</h2>
 		<div class="otrascat">
 			<span class="icon-ellipsis"></span>
 			<a href="">política</a>
@@ -14,7 +14,7 @@
 	<article masonry id="categoria" class="wx12 hxa columnas" >
 		<!--EL SIGUIENTE A SE REPITE POR CADA NOTA---->
 		<div data-ng-repeat="cat in categoria.notas_categoria">
-			<a href="nota/{{cat.link}}">
+			<a href="nota/{{cat.id}}/{{cat.nombre}}/{{cat.link}}">
 				<div class="item it-cat masonry-brick">
 					<img src="">
 					<time>{{cat.fecha}}</time>

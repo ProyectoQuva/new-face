@@ -8,7 +8,8 @@
 	function CategoriaCtrl($routeParams, Noticias){
 		var vm = this;
 
-		Noticias.query({categoria: $routeParams.categoria}).$promise.then(function(res){
+		Noticias.get({categoria: $routeParams.categoria}).$promise.then(function(res){
+			console.log(res.results);
 			vm.notas_categoria = res;
 		});
 	}
