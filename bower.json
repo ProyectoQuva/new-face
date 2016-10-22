@@ -3,7 +3,9 @@
   "description": "FrontEnd para diario digital vo-ve",
   "author": "QUVA",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "angular-sanitize": "^1.5.8"
+  },
   "devDependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",

@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('vove', ['ngRoute', 'vove.controllers', 'vove.services','wu.masonry'])
+		.module('vove', ['ngRoute', 'vove.controllers', 'vove.services','wu.masonry','ngSanitize'])
 		.config(config);
 
 	function config($locationProvider, $routeProvider){
@@ -21,7 +21,7 @@
 	    .when('/categoria/:categoria',{
 	      templateUrl: 'templates/categoria.html',
 	      controller: 'CategoriaCtrl',
-	      controllerAs: 'categoria'
+	      controllerAs: 'catego'
 	    })
 	    .when('/nota', {
 	    	templateUrl: 'templates/nota-comun.html'

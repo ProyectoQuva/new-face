@@ -10,6 +10,9 @@
 		
 		Noticias.get({titulo: $routeParams.titulo}).$promise.then(function(res){
 			vm.noticia = res.results;
+
+			$rootScope.title = vm.noticia[0].titulo; console.log($rootScope.title);
+			$rootScope.tipo = "nota";
 			$rootScope.clase = vm.noticia[0].nombre.toLowerCase();
 		});
 	}

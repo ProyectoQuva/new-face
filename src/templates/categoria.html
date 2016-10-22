@@ -1,6 +1,5 @@
-	<!------------ENCABEZADO DE LA CATEGORIA---->
 	<div class="wx12 top">
-		<h2>{{nota.titulo}}</h2>
+		<h2>{{clase}}</h2>
 		<div class="otrascat">
 			<span class="icon-ellipsis"></span>
 			<a href="">política</a>
@@ -10,16 +9,15 @@
 			<a href="">actualidad</a>
 		</div>	
 	</div>
-	<!------------CAJA DONDE SE REPITEN LAS NOTICAS------------>
-	<article masonry id="categoria" class="wx12 hxa columnas" >
-		<!--EL SIGUIENTE A SE REPITE POR CADA NOTA---->
-		<div data-ng-repeat="cat in categoria.notas_categoria">
-			<a href="nota/{{cat.id}}/{{cat.nombre}}/{{cat.link}}">
-				<div class="item it-cat masonry-brick">
-					<img src="">
-					<time>{{cat.fecha}}</time>
-					<h5>{{cat.titulo}}</h5>
-					<p>{{cat.bajada}}</p>
+
+	<article masonry id="categoria" class="wx12 hxa columnas">
+		<div data-ng-repeat="cate in catego.notas_categoria">
+			<a href="nota/{{cate.id}}/{{cate.nombre}}/{{cate.link}}">
+				<div class="masonry-brick item it-cat ">
+					<img src="http://www.vo-ve.com/images/{{cate.imagen}}">
+					<time>{{cate.fecha}}</time>
+					<h5>{{cate.titulo}}</h5>
+					<p>{{cate.bajada}}</p>
 				</div>
 			</a>
 		</div>
@@ -30,4 +28,4 @@
 	<div class="pie wx12 hxa flex al-center">
 		<div class="carga icon-loader"></div>
 	</div>
-<div class="ir-arriba icon-skip-back"></div>
+	<div class="ir-arriba icon-skip-back"></div>

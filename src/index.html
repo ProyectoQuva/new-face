@@ -2,12 +2,40 @@
 <html lang="en" data-ng-app="vove">
 <head>
 	<base href="/">
+	<title>Vo-Ve / {{title}}</title>
+
+	<link rel="shortcut icon" href="img/favicon.png"/>
+	<link rel="icon" href="img/favicon.png"/>
+	<link rel="author" href=""/>	
+	
 	<meta charset="UTF-8">
-	<title>Hola Jonás</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+	<meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+
+	<!-- Schema.org markup for Google+ -->
+	<meta itemprop="name" content="{{title}}">
+	<meta itemprop="description" content="{{}}">
+	<meta itemprop="image" content="http://">
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@vovenoticias">
+	<meta name="twitter:title" content="{{title}}">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image:src" content="http://">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="{{title}}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://" />
+	<meta property="og:image" content="http://" />
+	<meta property="og:description" content="" />
+	<meta property="og:site_name" content="Vo-Ve.com, i.e. Moz" />
+
 	<!--bower:css-->
 	<!--endbower-->
-
 	<!--inject:css-->
 	<link rel="stylesheet" href="/css/animate.min.css">
 	<link rel="stylesheet" href="/css/font-icon.css">
@@ -16,8 +44,9 @@
 </head>
 <body>
 	<aside>
+		<div class="bot-menu icon-apps"></div>
 		<header>
-			<h1 class="wx12">vove.com</h1>
+			<a href="/"><h1 class="wx12">vove.com</h1></a>
 			<div class="flaps cont wx12">
 				<div class="wx3 hx12 icon-menu" id="bot-menu"></div>
 				<div class="wx3 hx12 icon-search" id="bot-buscador"></div>
@@ -29,13 +58,12 @@
 		<nav>
 			<div id="menu">
 				<ul>
-					<li><span class="icon-home"></span>Ultimas Noticias</li>
-
-					<li><span class="icon-clock"></span>actualidad</li>
-					<li><span class="icon-work"></span>política</li>
-					<li><span class="icon-directions_bike"></span>deportes</li>
-					<li><span class="icon-message"></span>diálogo abierto</li>
-					<li><span class="icon-weekend"></span>entretenimiento</li>
+					<a href="/"><li><span class="icon-home"></span>Ultimas Noticias</li></a>
+					<a href="/categoria/actualidad"><li><span class="icon-clock"></span>actualidad</li></a>
+					<a href="/categoria/politica"><li><span class="icon-work"></span>política</li></a>
+					<a href="/categoria/deportes"><li><span class="icon-directions_bike"></span>deportes</li></a>
+					<a href="/categoria/dialogo-abierto"><li><span class="icon-message"></span>diálogo abierto</li></a>
+					<a href="/categoria/entretenimiento"><li><span class="icon-weekend"></span>entretenimiento</li></a>
 					<li><span class="icon-star2"></span>lo más visto</li>
 					<li><span class="icon-border_color"></span>más comentado</li>
 				</ul>
@@ -106,7 +134,7 @@
 		</footer>		
 	</aside>
 
-	<section data-ng-view class="principal {{clase}}"></section>
+	<section data-ng-view class="{{tipo}} {{clase}}"></section>
 
 
 	<!--bower:js-->
@@ -126,7 +154,7 @@
 
 	<script src="lib/angular-route/angular-route.js"></script>
 	<script src="lib/angular-resource/angular-resource.js"></script>
-
+	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
 	<!--endbower-->
 
 	<script src="js/app.js"></script>

@@ -2,13 +2,13 @@
 <div class="visualbox" style="display:hidden;">
 	<div id="cerrar-visual" class="bot-cerrar icon-close"></div>
 	
-	<div class="img animate" style="background-image:url(http://);"></div><!--en el background va la imagen principal-->
+	<div class="img animate" style="background-image:url(http://www.vo-ve.com/images/{{nota.noticia[0].imagen}});"></div><!--en el background va la imagen principal-->
 	<div class="thumbs flex al-center">
 		<div id="my-thumbs-list" class="content">
 		  <ul>
 		  	<!--EL SIGUIENTE A SE REPITE X LA CANTIDAD DE IMAGENES QUE TENGA LA NOTICIA
 		  	TENÉS QUE PONER EL ENLACE DE CADA IMAGEN EN EL HREF DEL A Y EN EL BACKGROUND DEL LI-->
-		    <a href=""><li class="thumb" style="background-image:url(http://)"></li></a>
+		    <a href="http://www.vo-ve.com/images/{{nota.noticia[0].imagen}}"><li class="thumb" style="background-image:url(http://www.vo-ve.com/images/{{nota.noticia[0].imagen}})"></li></a>
 		  </ul>
 		</div>
 	</div>
@@ -17,48 +17,63 @@
 <!----------------FONDO DESENFOCADO---------------->
 <div class="blur">
 	<!--EN EL SIGUIENTE SPAN TENÉS QUE PONER LA URL DE LA IMAGEN PRINCIPAL EN EL BACKGROUND-->
-	<span style="background-image:url(http://);"></span>
+	<span style="background-image:url(http://www.vo-ve.com/images/{{nota.noticia[0].imagen}});"></span>
 </div>
 
 <!---------------CUERPO DE NOTA-------------------->
-<div masonry column-width=".col-bas4" class="cont" id="notacuerpo">
+<div column-width=".col-bas4" class="cont" id="notacuerpo">
 	<!----------------ENCABEZADO---------------->
-	<div class="col-bas8 col-med12 encabezado masonry-brick">
+	<div class="col-bas8 col-med12 encabezado brick">
 			<time>{{nota.noticia[0].fecha}}</time>
 			<h2>{{nota.noticia[0].titulo}}</h2>
 			<b>{{nota.noticia[0].bajada}}</b> 
 	</div>
 	<!----------------IMAGENES---------------->
-	<div class="col-bas4 col-med12 imagenes masonry-brick">
+	<div class="col-bas4 col-med12 imagenes brick">
 		<!--VA LA URL DE LA IMAGEN PRINCIPAL EN EL BACKGROUND-->
-		<div id="abrir-visual" class="img" style="background-image:url(http://);"></div>
+		<div id="abrir-visual" class="img" style="background-image:url(http://www.vo-ve.com/images/{{nota.noticia[0].imagen}});"></div>
 		<div class="thumbs flex al-between">
 			<!--EL A SE REPITE POR CADA IMAGEN QUE TENGA LA NOTA, LA URL VA DOS VECES: EN EL HREF DEL A Y EN EL BACKGROUND DEL DIV DE ADENTRO-->
-			<a href="{URL-IMAGEN}" rel="miimg">
-				<div class="thumb"  style="background-image:url({URL-IMAGEN})"></div>
+			<a href="http://www.vo-ve.com/images/{{nota.noticia[0].imagen}}" rel="miimg">
+				<div class="thumb"  style="background-image:url(http://www.vo-ve.com/images/{{nota.noticia[0].imagen}})"></div>
 			</a>
 		</div>
 	</div>
 	<!----------------CUERPO TEXTUAL---------------->
-	<div class="col-bas8 col-med12 cuerpo masonry-brick">
-		<div ng-bind-unsafe-html="nota.noticia[0].cuerpo"></div>
+	<div class="col-bas8 col-med12 cuerpo brick">
+		<div class="util ut-a">
+			<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/19809-Los-taxistas-reclaman-un-trabajo-en-blanco"></a>
+			<a class="icon-twitter" href="https://twitter.com/intent/tweet?url={LA URL DE LA NOTA}"></a>
+			<a class="icon-google-plus" href="https://plus.google.com/share?url={LA URL DE LA NOTA}"></a>
+			<a href="" class="icon-printer"></a>
+			<a href="" class="icon-zoom-in textmas"></a>
+			<a href="" class="icon-zoom-out textmen"></a>
+		</div>
+
+		<div class="conte" ng-bind-html="nota.noticia[0].cuerpo"></div>
+
+		<div class="util ut-z">
+			<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/19809-Los-taxistas-reclaman-un-trabajo-en-blanco"></a>
+			<a class="icon-twitter" href="https://twitter.com/intent/tweet?url={LA URL DE LA NOTA}"></a>
+			<a class="icon-google-plus" href="https://plus.google.com/share?url={LA URL DE LA NOTA}"></a>
+		</div>
 	</div>
 	<!----------------PIE DE NOTA---------------->
-	<div class="col-bas8 col-med12 pie masonry-brick">
+	<div class="col-bas8 col-med12 pie brick">
 		<i>¿Qué te pareció la nota?<span class="icon-navigate_before"></span></i>
 		<div class="minif cont">
 			<div class="wx6 fil flex al-start">
 				<span class="icon-thumb_up"></span>
-				<p>{CANTIDAD DE ME-GUSTA}</p>
+				<p>{{nota.noticia[0].megusta}}</p>
 			</div>
 			<div class="wx6 fil flex al-end">
-				<p>{CANTIDAD DE NO-ME-GUSTA}</p>
+				<p>{{nota.noticia[0].nomegusta}}</p>
 				<span class="icon-thumb_down"></span>
 			</div>
 		</div>
 	</div>
 	<!----------------ETIQUETAS---------------->
-	<div class="col-bas4 col-med12 etiquetas flex masonry-brick">
+	<div class="col-bas4 col-med12 etiquetas flex brick">
 		<i>Etiquetas de esta nota:<span class="icon-navigate_before"></span></i>
 		<div class="minif">
 			<!--EL SIGUIENTE SPAN SE REPITE SEGUN LA CANTIDAD DE ETIQUETAS DE LA NOTA-->
@@ -66,7 +81,7 @@
 		</div>
 	</div>
 	<!----------------RELACIONADAS---------------->
-	<div class="col-bas4 col-med12 relacionadas flex masonry-brick">
+	<div class="col-bas4 col-med12 relacionadas flex brick">
 		<i>Noticias relacionadas:<span class="icon-navigate_before"></span></i>
 		<div class="minif">
 			<!--EL SIGUIENTE DIV SE REPITE 5 VECES CON LAS NOTAS RELACIONADAS-->
@@ -77,7 +92,7 @@
 		</div>
 	</div>
 	<!----------------COMENTARIOS---------------->
-	<div class="col-bas8 col-med12 comentarios masonry-brick">
+	<div class="col-bas8 col-med12 comentarios brick">
 		<i>Dejá tu comentario:<span class="icon-navigate_before"></span></i>
 		<div class="minif">
 			<div class="opciones fil">
@@ -164,4 +179,4 @@
 	</div>
 </div>
 
-
+<script src="js/scr-nota.js"></script>
