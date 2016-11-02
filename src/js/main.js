@@ -19,23 +19,9 @@ $('nav').niceScroll({
 		autohidemode: false,
 		horizrailenabled: false
 	});
+	console.log(scroll);
 }
 
-jQuery(document).ready(function($){
-$('#mensaje').niceScroll({
-		scrollspeed: 60,
-		mousescrollstep: 40,
-		cursorwidth: 3,
-		cursorheight: 130,
-		cursorborder: 1,
-		cursorcolor: 'rgba(255,255,255,0.2)',
-		cursorborderradius: 0,
-		styler:"fb",
-		autohidemode: false,
-		horizrailenabled: false
-	});
-		}
-);
 /*NAV*/
 $(document).ready(vovenav);
 
