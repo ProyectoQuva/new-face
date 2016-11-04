@@ -112,15 +112,15 @@
 						<input type="submit" value="enviar">
 					</form>
 				</div>
-				<div class="cantidad">({AQUI VA LA CANTIDAD DE COMENTARIOS QUE TENGA LA NOTA}) Comentarios</div>
+				<div class="cantidad">({{nota.cantidad}}) Comentarios</div>
 				<div class="comentados">
 					<!--EL SIGUIENTE DIV CON CLASE "coment fil" SE REPITE SEGUN LOS COMENTARIOS-->
-					<div class="coment fil">
+					<div class="coment fil" data-ng-repeat="comment in nota.comentarios" >
 						<div class="data">
 							<span class="icon-speech-bubble"></span>
-							{FECHA Y HORA DEL COMENTARIO}
+							{{comment.fecha}}
 						</div>
-						<p><b>{NOMBRE DEL COMENTADOR}</b>{CUERPO DEL COMENTARIO}</p>
+						<p><b>{{comment.nombre}}</b>{{comment.texto}}</p>
 					</div>
 				</div>
 			</div>
