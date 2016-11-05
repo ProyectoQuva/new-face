@@ -5,7 +5,7 @@
 		.module('vove.controllers')
 		.controller('HomeCtrl', HomeCtrl);
  
-	function HomeCtrl(Noticias, $rootScope){
+	function HomeCtrl(Noticias, MetaData, $rootScope){
 		var vm = this;
 
 		$rootScope.title = "Noticias"; console.log($rootScope.title);
@@ -34,8 +34,11 @@
 
 		Noticias.get({categoria: "dialogo abierto", s: 20}).$promise.then(function(res){
 			vm.notas_dialogo = res.results;
-
 		});
 
+		vm.prepare_meta = function(titulo, bajada){
+			MetaData.data.title = titulo;
+			MetaData.data.description = bajada;
+		};
 	}
 })();

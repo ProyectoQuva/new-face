@@ -42,9 +42,9 @@
 	<!----------------CUERPO TEXTUAL---------------->
 	<div class="col-bas8 col-med12 cuerpo brick">
 		<div class="util ut-a">
-			<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/19809-Los-taxistas-reclaman-un-trabajo-en-blanco"></a>
-			<a class="icon-twitter" href="https://twitter.com/intent/tweet?url={LA URL DE LA NOTA}"></a>
-			<a class="icon-google-plus" href="https://plus.google.com/share?url={LA URL DE LA NOTA}"></a>
+			<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
+			<a class="icon-twitter" href="https://twitter.com/intent/tweet?url=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
+			<a class="icon-google-plus" href="https://plus.google.com/share?url=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
 			<a href="" class="icon-printer"></a>
 			<a href="" class="icon-zoom-in textmas"></a>
 			<a href="" class="icon-zoom-out textmen"></a>
@@ -53,9 +53,9 @@
 		<div class="conte" ng-bind-html="nota.noticia[0].cuerpo"></div>
 
 		<div class="util ut-z">
-			<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/19809-Los-taxistas-reclaman-un-trabajo-en-blanco"></a>
-			<a class="icon-twitter" href="https://twitter.com/intent/tweet?url={LA URL DE LA NOTA}"></a>
-			<a class="icon-google-plus" href="https://plus.google.com/share?url={LA URL DE LA NOTA}"></a>
+			<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
+			<a class="icon-twitter" href="https://twitter.com/intent/tweet?url=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
+			<a class="icon-google-plus" href="https://plus.google.com/share?url=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
 		</div>
 	</div>
 	<!----------------PIE DE NOTA---------------->
@@ -113,9 +113,9 @@
 					</form>
 				</div>
 				<div class="cantidad">({{nota.cantidad}}) Comentarios</div>
-				<div class="comentados">
+				<div class="comentados" >
 					<!--EL SIGUIENTE DIV CON CLASE "coment fil" SE REPITE SEGUN LOS COMENTARIOS-->
-					<div class="coment fil" data-ng-repeat="comment in nota.comentarios" >
+					<div class="coment fil" data-ng-repeat="comment in nota.comentarios" data-ng-show="{{nota.comentarios.length > 0}}">
 						<div class="data">
 							<span class="icon-speech-bubble"></span>
 							{{comment.fecha}}
@@ -156,13 +156,13 @@
 		<div class="share-options">
 			<div class="redes">
 				<p>Copia el siguiente enlace:</p>
-				<input type="text" value="{LA URL ACTUAL DE LA NOTICIA}">
+				<input type="text" value="http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}">
 
 				<p>Elige el medio para compartir:</p>
 				<div class="flex al-between">
-					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/19809-Los-taxistas-reclaman-un-trabajo-en-blanco"></a>
-					<a class="icon-twitter" href="https://twitter.com/intent/tweet?url={LA URL DE LA NOTA}"></a>
-					<a class="icon-google-plus" href="https://plus.google.com/share?url={LA URL DE LA NOTA}"></a>
+					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://vo-ve.com/nota/{{nota.noticia[0].id}}/{{nota.noticia[0].link}}"></a>
+					<a class="icon-twitter" href="https://twitter.com/intent/tweet?url={{nota.noticia[0].link}}"></a>
+					<a class="icon-google-plus" href="https://plus.google.com/share?url={{nota.noticia[0].link}}"></a>
 					<a class="icon-pinterest" href=""></a>
 					<a class="icon-mail" id="sharemail"></a>
 				</div>

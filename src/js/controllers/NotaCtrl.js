@@ -5,7 +5,7 @@
 		.module('vove.controllers')
 		.controller('NotaCtrl', NotaCtrl);
 
-	function NotaCtrl(Noticias, Comentarios, $routeParams, $rootScope){
+	function NotaCtrl(Noticias, Comentarios, $routeParams, $rootScope, $sce){
 		var vm = this;
 		
 		Noticias.get({titulo: $routeParams.titulo}).$promise.then(function(res){
