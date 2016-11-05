@@ -1,7 +1,8 @@
 	<div class="desplazador wx12 hx12">
 		<article masonry reload-on-show column-width="250" class="actualidad">
 			<div data-ng-repeat="actualidad in home.notas_actualidad track by actualidad.id">
-				<a href="nota/{{actualidad.id}}/{{actualidad.nombre}}/{{actualidad.link}}">
+				<a href="nota/{{actualidad.id}}/{{actualidad.nombre}}/{{actualidad.link}}"
+				data-ng-click="home.prepare_meta(actualidad.titulo, actualidad.bajada)">
 				<div class="masonry-brick item it-3x2 {{actualidad.rango}}" style="background-image: url(http://69.61.93.75/images/{{actualidad.imagen}})" data-ng-show="{{actualidad.rango == 'destacado'}}">
 						<div class="wx4 hx12">
 							<time>{{actualidad.fecha}}</time>
