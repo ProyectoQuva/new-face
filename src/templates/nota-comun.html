@@ -83,12 +83,12 @@
 	<!----------------RELACIONADAS---------------->
 	<div class="col-bas4 col-med12 relacionadas flex brick">
 		<i>Noticias relacionadas:<span class="icon-navigate_before"></span></i>
-		<div class="minif">
+		<div class="minif" data-ng-repeat="relacionada in nota.relacionadas">
 			<!--EL SIGUIENTE DIV SE REPITE 5 VECES CON LAS NOTAS RELACIONADAS-->
-			<div class="item item-rel">
-				<h5>{TITULO DE LA NOTICIA RELACIONADA}</h5>
-				<p>{BAJADA DE LA NOTICIA RELACIONADA}</p>
-			</div>
+			<a class="item item-rel" href="nota/{{relacionada.id}}/{{relacionada.nombre}}/{{relacionada.link}}">
+				<h5>{{relacionada.titulo}}</h5>
+				<p>{{relacionada.bajada}}</p>
+			</a>
 		</div>
 	</div>
 	<!----------------COMENTARIOS---------------->

@@ -19,5 +19,9 @@
 			vm.comentarios = res.results;
 			vm.cantidad = res.cantidad;
 		});
+
+		Noticias.get({id: $routeParams.id, type: 'related'}).$promise.then(function(res){
+			vm.relacionadas = res.results;
+		});
 	}
 })();
