@@ -83,12 +83,12 @@
 	<!----------------RELACIONADAS---------------->
 	<div class="col-bas4 col-med12 relacionadas flex brick">
 		<i>Noticias relacionadas:<span class="icon-navigate_before"></span></i>
-		<div class="minif">
+		<div class="minif" data-ng-repeat="relacionada in nota.relacionadas">
 			<!--EL SIGUIENTE DIV SE REPITE 5 VECES CON LAS NOTAS RELACIONADAS-->
-			<div class="item item-rel">
-				<h5>{TITULO DE LA NOTICIA RELACIONADA}</h5>
-				<p>{BAJADA DE LA NOTICIA RELACIONADA}</p>
-			</div>
+			<a class="item item-rel" href="nota/{{relacionada.id}}/{{relacionada.nombre}}/{{relacionada.link}}">
+				<h5>{{relacionada.titulo}}</h5>
+				<p>{{relacionada.bajada}}</p>
+			</a>
 		</div>
 	</div>
 	<!----------------COMENTARIOS---------------->
@@ -112,15 +112,15 @@
 						<input type="submit" value="enviar">
 					</form>
 				</div>
-				<div class="cantidad">({AQUI VA LA CANTIDAD DE COMENTARIOS QUE TENGA LA NOTA}) Comentarios</div>
+				<div class="cantidad">({{nota.cantidad}}) Comentarios</div>
 				<div class="comentados">
 					<!--EL SIGUIENTE DIV CON CLASE "coment fil" SE REPITE SEGUN LOS COMENTARIOS-->
-					<div class="coment fil">
+					<div class="coment fil" data-ng-repeat="comment in nota.comentarios" >
 						<div class="data">
 							<span class="icon-speech-bubble"></span>
-							{FECHA Y HORA DEL COMENTARIO}
+							{{comment.fecha}}
 						</div>
-						<p><b>{NOMBRE DEL COMENTADOR}</b>{CUERPO DEL COMENTARIO}</p>
+						<p><b>{{comment.nombre}}</b>{{comment.texto}}</p>
 					</div>
 				</div>
 			</div>
